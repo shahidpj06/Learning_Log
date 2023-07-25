@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'learn_log/base.html' %}
+
+    {% block content %}
+
+        <form action="{% url 'accounts:register' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_div }}
+
+            <button name="submit">Register</button>
+        </form>
+
+    {% endblock content %}
+</body>
+</html>

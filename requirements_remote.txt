@@ -1,0 +1,3 @@
+# Requirements for live project.
+gunicorn # development server
+psycopg2 # used to manage postgress database
